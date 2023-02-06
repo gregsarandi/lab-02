@@ -9,9 +9,16 @@
 
 Answer for Question 1: 
 
+After adding a 50% loss to the local environment, the UDP became very unreliable. The UDP worked approximately half the time. This was due to the 50% loss, which resulted in the data sent from server to client being dropped about 50% (half) of the time.
+
+
 Answer for Question 2:
 
+The TCP reliability changed drastically as a result of the 50% loss. The sending time between server and client gradually increased (i.e. the system got slower), eventually reaching the point where data packages stopped being sent between server and client. This occurred because the TCP is connection oriented. Thus, once connection between client and server was lost, the connection could not be recovered and no further data could be sent.
+
 Answer for Question 3: 
+
+The TCP response speed was much slower than that of the UDP response. This is to be expected, since TDP is typically slower than UDP, with the positive tradeoff of guaranteed data packet reception(once a connection is established). In fact, the TCP response became so slow that it was difficult to tell if data packets were actually being sent/received by the client/server. 
 
 
 ## TCP SERVER QUESTIONS:
